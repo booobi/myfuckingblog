@@ -1,3 +1,4 @@
+TODAY
 So here's my initial idea for the main page:
 
 1.OnPageLoad => ajax for post titles, summaries and ids -> postsData
@@ -7,3 +8,6 @@ So here's my initial idea for the main page:
 4.OnDone => Render post content
 
 At first, I thought that it would be a good idea to fetch post data, and then render(append) a PostSummary component for every post returned, but then I found out that it's a good idea to have the component state decide what is going to be rendered. So, I had to create a container component - PostsContainer, which, through its state, will render the available posts.
+
+Found a cool spinner - SpinKit by @tobiasahlin - https://github.com/tobiasahlin/SpinKit
+Will try to use it inbetween all navigations. 
