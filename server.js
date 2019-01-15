@@ -10,13 +10,8 @@ app.get("/", (req, res) => {
     res.end();
 });
 
-app.get("/test", (req, res) => {
-    res.render("testIndex");
-    res.end();
-});
-
-app.get("/react", (req, res) => {
-    res.render("reactTest");
+app.get("/reference", (req, res) => {
+    res.render("referenceIndex");
     res.end();
 });
 
