@@ -1,3 +1,5 @@
+NOTE: A lot of the things said below could be wrong. Although I've tried to rely on facts for every statement I've made it's still very possible that some concepts are wrong.
+
 TODAY
 So here's my initial idea for the main page:
 
@@ -11,3 +13,15 @@ At first, I thought that it would be a good idea to fetch post data, and then re
 
 Found a cool spinner - SpinKit by @tobiasahlin - https://github.com/tobiasahlin/SpinKit
 Will try to use it inbetween all navigations. 
+
+SOME DAYS AFTER THAT
+Trying to implement React Router. 
+An awesome explanation to a problem I encountered here : https://stackoverflow.com/questions/27928372/react-router-urls-dont-work-when-refreshing-or-writing-manually
+
+Both (BrowserRouter and HashRouter) of these are pretty easy to setup in my case, but - here's something very important that concerns me (mentined in the above link) - Search Engine Optimization. Since this is a blog, it will be driven mainly by content. Can't afford to not have posts indexed by google. So the best solution here seems to build an isomorphic app (React components can be reused for both server and client side rendering). As far as I understand, the initial call to the server would alays return a server rendered page (be it index page of posts page in this case), which potentially happens a lot faster. After that, all downloaded JS will bootstrap and front-end fuzz takes the wheel. That, plus the given bonus that you'd have valid URLs that would be 'crawlable' (SEO) by google.
+
+Isomorphic apps explained really good here : https://developer.ibm.com/node/2015/06/10/node-js-react-isomorphic-javascript-why-it-matters/
+
+Ok, upon further reading, it seems that google is doing js based crawling, which is probably going to solve that concern. I'm going to skip doing isomorphicity (is that even a word). Sticking to 'catch-all' solution for now.
+
+Ok, upon even further reading, fuck it, going isomorphic, why not.
