@@ -1,8 +1,14 @@
-class BlogPost extends React.Component {
+var React = require('react');
+
+module.exports = class BlogPost extends React.Component {
     constructor(props){
         super(props)
+        this.state = {
+          postID: this.props.postID
+        }
     }
     render() {
+      console.log("Rendering post with id: " + this.state.postID);
     return (
     <article>
       <div className="container">

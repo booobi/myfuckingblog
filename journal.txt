@@ -25,3 +25,6 @@ Isomorphic apps explained really good here : https://developer.ibm.com/node/2015
 Ok, upon further reading, it seems that google is doing js based crawling, which is probably going to solve that concern. I'm going to skip doing isomorphicity (is that even a word). Sticking to 'catch-all' solution for now.
 
 Ok, upon even further reading, fuck it, going isomorphic, why not.
+
+A DAY OR TWO PRECEEDING THE DAY AFTER TODAY
+Lots of small issues. One recent one me trying to pass data (in this case - route URLs that would be fetched from the DB) that is rendered server side to a client side react component. Long story short, relized that I don't have to do that. Can just query the api for it.

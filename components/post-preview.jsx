@@ -1,4 +1,7 @@
-class PostPreview extends React.Component {
+var React = require('react');
+var Link = require('react-router-dom/Link').default;
+
+module.exports = class PostPreview extends React.Component {
   constructor(props) {
     super(props),
     this.scrollToPost = () => {
