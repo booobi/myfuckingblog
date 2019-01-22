@@ -1,4 +1,7 @@
-class PostsContainer extends React.Component {
+var React = require('react');
+var PostPreview =require('./post-preview');
+
+module.exports = class PostsContainer extends React.Component {
     constructor(props){
         super(props)
         this.state = { postsData : [

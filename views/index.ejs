@@ -19,8 +19,8 @@
     rel='stylesheet' type='text/css'>
 
   <!-- Custom styles for this template -->
-  <link href="css/clean-blog.min.css" rel="stylesheet">
-  <link href="css/myfuckingblog.css" rel="stylesheet">
+  <link href="/css/clean-blog.min.css" rel="stylesheet">
+  <link href="/css/myfuckingblog.css" rel="stylesheet">
 
 
 </head>
@@ -45,13 +45,8 @@
 
   <!-- Main Content -->
   <div class="row">
-      <div class="col-lg-8 col-md-9 mx-auto">
-        <div id='root'>
-      <div class="sk-double-bounce">
-        <div class="sk-child sk-double-bounce1"></div>
-        <div class="sk-child sk-double-bounce2"></div>
-      </div>
-      </div>
+    <div class="col-lg-8 col-md-9 mx-auto">
+      <div id='root'><%- renderedData %></div>
     </div>
     <div class="col-md-3">
       <p>Total fucks used : 33</p>
@@ -59,8 +54,9 @@
       <p>Video of the day :</p>
       <div class="container">
         <!-- Copy & Pasted from YouTube -->
-        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/W0Y6AZPUsY8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/W0Y6AZPUsY8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
     </div>
   </div>
 
@@ -105,33 +101,29 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
   <!-- <script src="js/bundle/bootstrap.bundle.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
   <!-- Custom scripts for this template -->
-  <script src="js/clean-blog.min.js"></script>
+  <script src="/js/clean-blog.min.js"></script>
 
   <!-- React + ReactDOM -->
-  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <!-- <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script> -->
+  <!-- <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script> -->
 
   <!-- babel -->
   <!-- <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script> -->
   <!-- React Router -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-router-dom/4.3.1/react-router-dom.js"></script>
-  
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/react-router-dom/4.3.1/react-router-dom.js"></script> -->
+
   <!-- My test react script -->
-  <script  type=text/babel crossorigin src="js/blogpost.js"></script>
-  <script  type=text/babel crossorigin src="js/post-preview.js"></script>
-  <script  type=text/babel crossorigin src="js/posts-container.js"></script>
-  <script  type=text/babel crossorigin src="js/myfuckingblog.js"></script>
-  
+ 
+  <script crossorigin src="/js/myfuckingblog.js"></script>
+
   <!-- <script  type=text/babel crossorigin src="js/testRouting.js"></script> -->
 </body>
 
