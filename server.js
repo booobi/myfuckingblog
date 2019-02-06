@@ -14,8 +14,8 @@ const app = express();
 app.use(express.static('public'));
 app.set("view engine", "ejs");
 
-//fetch routesData
-const routesData = [
+//fetch from future DB
+const fetchedRoutes = [
     {
         url: "/1",
         postId: "1"
@@ -41,11 +41,11 @@ app.get("/*", (req, res) => {
         React.createElement(
             StaticRouter,
             { location: req.url, context: context },
-            React.createElement(App, {routesData: routesData})
+            React.createElement(App, {routesData: fetchedRoutes})
   )
       );
 
-    res.render("index", { renderedData: routedApp });
+    res.render("index", { renderedData: routedApp, renderedRoutes: fetchedRoutes });
     res.end();
     
 });

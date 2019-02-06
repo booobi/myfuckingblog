@@ -28,3 +28,9 @@ Ok, upon even further reading, fuck it, going isomorphic, why not.
 
 A DAY OR TWO PRECEEDING THE DAY AFTER TODAY
 Lots of small issues. One recent one me trying to pass data (in this case - route URLs that would be fetched from the DB) that is rendered server side to a client side react component. Long story short, relized that I don't have to do that. Can just query the api for it.
+
+WAY TOO LONG AFTER LAST TODAY
+So the problem that I will be tackling today is routes. Since the server generates all the valid routes I need a way to send them to the front end (so that browser router can pick them up). Since routes are quite the unique thing, I'm thinking of having them be rendered with all the other data upon initial request to the server (withing index page) and have the App component pick them up. I want to do this within the constructor of App so that they are picked up BEFORE any rendering is done - rendering is dependent on the routes.
+
+Did you know that undefined is undefined and typeof undefined is also undefined but (typeof undefined === undefined) is false? That is SO funnyihatethis.
+I am trying to implement a simple check for isBrowser with which i can fetch the rendered routes of the FE. I am kind of confused though - there will now be different behaviour in a component (base on environment - node or browser). I guess I was under the impression that isomorphic would mean we can reuse EVERYTHING and not have to implement env specific things. This is probably not the case and also, as I mentioned earlier, routes are special for this project so they get special treatment.
