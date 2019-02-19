@@ -16,9 +16,9 @@ module.exports = class App extends React.Component {
     }
 
     render() {
-    const renderedRoutes = this.state.routesData.map(routeData => {
+    const renderedRoutes = this.state.routesData.map((routeData,index) => {
         console.log("Route taken: " + routeData.url);
-    return (<Route path={routeData.url} render={() => <BlogPost postID={routeData.postId}/>} />)
+    return (<Route path={routeData.url} key={index} render={() => <BlogPost postID={routeData.postId}/>} />)
 }
     );
         return (

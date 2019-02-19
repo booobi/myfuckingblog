@@ -22,7 +22,7 @@ module.exports = class PostsContainer extends React.Component {
     }]};
     }
     render() {
-      const postSummaries = this.state.postsData.map((postData) => <PostPreview postTitle={postData.postTitle} postSubtitle={postData.postSubtitle} postId={postData.postId}/>)
+      const postSummaries = this.state.postsData.map((postData, index) => <PostPreview postTitle={postData.postTitle} postSubtitle={postData.postSubtitle} postId={postData.postId} key={index} />)
       
       return (
         <div style={{paddingLeft:'150px'}}>

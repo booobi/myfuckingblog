@@ -34,3 +34,5 @@ So the problem that I will be tackling today is routes. Since the server generat
 
 Did you know that undefined is undefined and typeof undefined is also undefined but (typeof undefined === undefined) is false? That is SO funnyihatethis.
 I am trying to implement a simple check for isBrowser with which i can fetch the rendered routes of the FE. I am kind of confused though - there will now be different behaviour in a component (base on environment - node or browser). I guess I was under the impression that isomorphic would mean we can reuse EVERYTHING and not have to implement env specific things. This is probably not the case and also, as I mentioned earlier, routes are special for this project so they get special treatment.
+
+Next on the line is server rendering components that use ajax for populating their data (in this case - BlogPost). We need this data to be present in the response from the server. I really don't want to have separated logic for this.
