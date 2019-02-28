@@ -6,6 +6,7 @@ var express = require('express');
 var React = require('react');
 var ReactDOMServer = require('react-dom/server');
 var StaticRouter = require('react-router-dom/StaticRouter').default;
+var apiRouter = require("./API/api");
 
 const App = require('./components/App');
 const port = 3000;
@@ -13,6 +14,7 @@ const app = express();
 
 app.use(express.static('public'));
 app.set("view engine", "ejs");
+app.use('/api', apiRouter);
 
 //fetch from future DB
 const fetchedRoutes = [

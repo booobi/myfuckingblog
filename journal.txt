@@ -36,3 +36,8 @@ Did you know that undefined is undefined and typeof undefined is also undefined 
 I am trying to implement a simple check for isBrowser with which i can fetch the rendered routes of the FE. I am kind of confused though - there will now be different behaviour in a component (base on environment - node or browser). I guess I was under the impression that isomorphic would mean we can reuse EVERYTHING and not have to implement env specific things. This is probably not the case and also, as I mentioned earlier, routes are special for this project so they get special treatment.
 
 Next on the line is server rendering components that use ajax for populating their data (in this case - BlogPost). We need this data to be present in the response from the server. I really don't want to have separated logic for this.
+
+I DON'T CARE ANYMORE
+Today I will be making a mock api. I will delay having a DB untill the very end, because, well, why not?
+One problem that I encountered - I want to store html within the DB so that every post can have its own style. The problem is getting it back as html. I can't use JSX to store the data that comes back, because I don't want to introduce React within the API. I want it to be plain HTML (if that's good or bad is another topic).
+Anyway, it seems that dangerouslySetInnerHTML react property is going to do the trick.
