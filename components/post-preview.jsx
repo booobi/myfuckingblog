@@ -12,7 +12,7 @@ module.exports = class PostPreview extends React.Component {
   render() {
     return (
         <div className="post-preview">
-          <Link to={"/" + this.props.postId} onClick={this.scrollToPost}>
+          <Link to={"/post/" + this.props.postId} onClick={this.scrollToPost}>
             <h2 className="post-title">
               {this.props.postTitle}
             </h2>
